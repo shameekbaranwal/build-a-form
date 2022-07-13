@@ -42,11 +42,11 @@ export default function SubmitButton({ questions, getAnswers }) {
 				error={hasError}
 			/>
 			<button
-				className='flex items-center justify-center px-8 py-4 mt-6 transition-all duration-200 bg-orange-400/40 group gap-x-2 hover:bg-orange-400/60'
+				className='flex items-center justify-center px-8 py-4 mt-6 transition-all duration-200 bg-green-400/40 group gap-x-2 hover:bg-green-400/60'
 				onClick={onClick}
 			>
 				<SaveAsIcon
-					className='text-orange-700 group-hover:text-orange-900 group-hover:animate-bounce'
+					className='text-green-700 group-hover:text-green-900 group-hover:animate-bounce'
 					width={20}
 				/>
 				<p className='font-mono text-lg font-bold'>save the form</p>

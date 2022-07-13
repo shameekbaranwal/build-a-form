@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 import Home from './pages/Home.jsx';
 import CreateForm from './pages/CreateForm.jsx';
@@ -12,9 +12,11 @@ function App() {
 	return (
 		<div className='flex items-center justify-center w-full h-full min-h-screen py-10 bg-blue-200'>
 			<div className='w-full pb-10 mx-2 bg-white rounded-md sm:max-w-sm md:max-w-xl'>
-				<h1 className='my-2 text-2xl font-semibold text-center font-Montserrat'>
-					form builder
-				</h1>
+				<Link to='/'>
+					<h1 className='my-2 text-2xl font-semibold text-center font-Montserrat'>
+						build a form
+					</h1>
+				</Link>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/create' element={<CreateForm />} />

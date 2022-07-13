@@ -10,7 +10,7 @@ export default function CreateNewFormButton() {
 				className='relative flex items-center justify-center w-full py-2'
 			>
 				<PlusCircleIcon className='relative w-5 h-5 transition-all duration-200 right-2 group-hover:animate-spin group-hover:w-6 group-hover:h-6' />
-				<p>build a new form</p>
+				<p>new form</p>
 			</Link>
 		</button>
 	);
