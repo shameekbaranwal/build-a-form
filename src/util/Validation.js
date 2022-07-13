@@ -54,4 +54,4 @@ const validateFormData = formData => {
 	return { message, isValid };
 };
 
-export default validateFormData;
+export { validateFormData };

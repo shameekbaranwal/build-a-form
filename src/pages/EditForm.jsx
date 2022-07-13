@@ -8,7 +8,7 @@ import AddQuestionButton from '../components/CreateForm/AddQuestionButton.jsx';
 import SaveFormButton from '../components/CreateForm/SaveFormButton.jsx';
 import { FormsContext } from '../contexts/FormsContext.jsx';
 
-export default function CreateForm() {
+export default function EditForm() {
 	// decrement because the user will see 1-indexed forms but it is stored as 0-indexed
 	let { id } = useParams();
 	id--;

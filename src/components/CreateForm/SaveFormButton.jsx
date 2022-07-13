@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { SaveAsIcon } from '@heroicons/react/outline';
 import { useNavigate } from 'react-router-dom';
 
-import validateFormData from '../../util/Validation';
+import { validateFormData } from '../../util/Validation';
 import { FormsContext } from '../../contexts/FormsContext.jsx';
 import SaveErrorModal from './SaveErrorModal.jsx';
 
