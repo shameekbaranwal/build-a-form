@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<div className='flex flex-col w-full h-full gap-y-8'>
 			<FormsList forms={forms} />
-			<CreateNewFormButton />
+			<CreateNewFormButton next={forms.length} />
 		</div>
 	);
 }

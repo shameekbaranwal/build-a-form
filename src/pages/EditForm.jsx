@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 import QuestionEditable from '../components/CreateForm/QuestionEditable.jsx';
 import InputField from '../components/CreateForm/InputField.jsx';
@@ -7,9 +8,22 @@ import AddQuestionButton from '../components/CreateForm/AddQuestionButton.jsx';
 import SaveFormButton from '../components/CreateForm/SaveFormButton.jsx';
 
 export default function CreateForm() {
-	const [title, setTitle] = useState('');
+	// decrement because the user will see 1-indexed forms but it is stored as 0-indexed
+	let { id } = useParams();
+	id--;
+
+	const forms = JSON.parse(localStorage.getItem('forms'));
+
+	if (!forms[id])
+		return (
+			<div className='mt-10 text-2xl text-center text-red-600'>
+				<p>404</p>
+			</div>
+		);
+
+	const [title, setTitle] = useState(forms[id].title);
 	const { questions, addQuestion, removeQuestion, updateQuestion } =
-		useQuestions();
+		useQuestions(forms[id].questions);
 
 	const formData = { title, questions };
 
@@ -39,7 +53,7 @@ export default function CreateForm() {
 			</div>
 			<AddQuestionButton onClick={addQuestion} />
 
-			<SaveFormButton formData={formData} />
+			<SaveFormButton formData={formData} formID={id} />
 		</div>
 	);
 }

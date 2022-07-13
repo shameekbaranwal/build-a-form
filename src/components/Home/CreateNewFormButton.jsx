@@ -5,7 +5,7 @@ export default function CreateNewFormButton() {
 	return (
 		<button className='flex items-center justify-center w-full h-full mb-4 font-mono transition duration-200 bg-green-400/80 group hover:bg-green-300/100'>
 			<Link
-				to='/create/0'
+				to={'/create'}
 				className='relative flex items-center justify-center w-full py-2'
 			>
 				<svg

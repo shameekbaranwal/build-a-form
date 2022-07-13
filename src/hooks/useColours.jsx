@@ -6,7 +6,7 @@ export default function useColours(index) {
 		'bg-orange-300/80',
 		'bg-red-400/70',
 		'bg-yellow-300/70',
-		'bg-indigo-400/80',
+		'bg-cyan-300/60',
 	];
 	const colour = possibleColours[index % possibleColours.length];
 

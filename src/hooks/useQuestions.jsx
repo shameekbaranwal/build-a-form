@@ -6,13 +6,7 @@ export default function useQuestions(
 			label: '',
 			type: 'checkbox',
 			mandatory: false,
-			options: ['New Option'],
-		},
-		{
-			label: '',
-			type: 'checkbox',
-			mandatory: false,
-			options: ['New Option'],
+			options: ['new option'],
 		},
 	],
 ) {
@@ -28,9 +22,9 @@ export default function useQuestions(
 		const newQuestions = [...questions];
 		newQuestions.push({
 			label: '',
-			type: 0,
+			type: 'checkbox',
 			mandatory: false,
-			options: ['Option 1'],
+			options: ['new option'],
 		});
 		setQuestions(newQuestions);
 	};

@@ -15,6 +15,8 @@ export default function OptionEditable({
 		<div className='flex items-center justify-center flex-grow w-full my-2'>
 			<p className='text-sm font-semibold'>{index + 1})</p>
 			<InputField
+				// name='option'
+				id={index}
 				value={option}
 				setValue={updateOption}
 				className='flex-1'

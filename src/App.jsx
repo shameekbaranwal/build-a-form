@@ -2,26 +2,12 @@ import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home.jsx';
 import CreateForm from './pages/CreateForm.jsx';
+import EditForm from './pages/EditForm.jsx';
 import PreviewForm from './pages/PreviewForm.jsx';
 
 function App() {
-	localStorage.setItem(
-		'forms',
-		JSON.stringify([
-			{
-				title: 'accessibility survey',
-				questions: [],
-			},
-			{
-				title: 'attendance form',
-				questions: [],
-			},
-			{
-				title: 'event registration',
-				questions: [],
-			},
-		]),
-	);
+	if (localStorage.getItem('forms') === null)
+		localStorage.setItem('forms', JSON.stringify([]));
 
 	return (
 		<div className='flex items-center justify-center w-full h-full min-h-screen py-10 bg-blue-200'>
@@ -31,7 +17,8 @@ function App() {
 				</h1>
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='/create/:id' element={<CreateForm />} />
+					<Route path='/create' element={<CreateForm />} />
+					<Route path='/edit/:id' element={<EditForm />} />
 					<Route path='/preview/:id' element={<PreviewForm />} />
 				</Routes>
 			</div>

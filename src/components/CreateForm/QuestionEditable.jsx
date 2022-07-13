@@ -6,8 +6,8 @@ import useColours from '../../hooks/useColours.jsx';
 import OptionEditable from './OptionEditable.jsx';
 import Dropdown from '../General/Dropdown.jsx';
 import Toggle from '../General/Toggle.jsx';
-import { PlusCircleIcon } from '@heroicons/react/solid';
 import { TrashIcon } from '@heroicons/react/outline';
+import AddOptionButton from './AddOptionButton.jsx';
 
 export default function QuestionEditable({
 	questions,
@@ -19,7 +19,8 @@ export default function QuestionEditable({
 	const colour = useColours(index);
 
 	const { options, addOption, updateOption, removeOption } = useOptions(
-		question.options,
+		question,
+		updateQuestion,
 	);
 
 	return (
@@ -27,7 +28,7 @@ export default function QuestionEditable({
 			className={`w-full h-full py-4 font-mono flex flex-col justify-center items-center ${colour}`}
 		>
 			<div className='flex items-center justify-between w-full'>
-				<p className='mx-4 text-lg font-bold'>#{index}</p>
+				<p className='mx-4 text-lg font-bold'>#{index + 1}</p>
 				<div className='flex items-center justify-center mx-4 gap-x-4'>
 					<p className='font-semibold text-center'>required:</p>
 					<Toggle
@@ -56,6 +57,7 @@ export default function QuestionEditable({
 			<InputField
 				className='w-full font-semibold text-center'
 				name='question'
+				id={index}
 				value={question.label}
 				setValue={value => {
 					question.label = value;
@@ -64,26 +66,17 @@ export default function QuestionEditable({
 				centered
 			/>
 			<div className='flex flex-col w-full px-2'>
-				{options.map((option, index) => (
+				{options.map((option, idx) => (
 					<OptionEditable
-						key={index}
-						index={index}
+						key={idx}
+						index={idx}
 						options={options}
-						updateOption={o => updateOption(index, o)}
-						removeOption={() => removeOption(index)}
+						updateOption={o => updateOption(idx, o)}
+						removeOption={() => removeOption(idx)}
 					/>
 				))}
 			</div>
-			<button
-				className='flex items-center justify-center px-8 py-2 mt-4 transition-all duration-200 rounded bg-teal-400/40 group gap-x-2 hover:bg-teal-400/60'
-				onClick={addOption}
-			>
-				<PlusCircleIcon
-					className='text-teal-700 group-hover:text-teal-900 group-hover:animate-spin'
-					width={20}
-				/>
-				<p className='text-sm'>new option</p>
-			</button>
+			<AddOptionButton onClick={addOption} />
 		</div>
 	);
 }

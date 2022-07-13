@@ -1,16 +1,16 @@
 import React from 'react';
 
-function InputField({ name, value, setValue, className, centered }) {
+function InputField({ name, value, setValue, className, centered, id }) {
 	return (
 		<label
-			htmlFor={name}
+			htmlFor={name + ' ' + id}
 			className={`text-sm md:text-base relative ${className}`}
 		>
 			<input
 				type='text'
 				value={value}
 				name={name}
-				id={name}
+				id={name + ' ' + id}
 				onChange={val => setValue(val.target.value)}
 				className={`w-full px-4 py-2 text-gray-800 placeholder-transparent transition bg-transparent rounded shadow-sm peer ring-0 focus:outline-none  hover:shadow focus:shadow-lg ${
 					centered && 'text-center'
