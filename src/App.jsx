@@ -24,8 +24,8 @@ function App() {
 	);
 
 	return (
-		<div className='flex items-center justify-center w-full h-full min-h-screen bg-blue-200'>
-			<div className='w-full mx-2 bg-white rounded-md sm:max-w-sm md:max-w-xl'>
+		<div className='flex items-center justify-center w-full h-full min-h-screen py-10 bg-blue-200'>
+			<div className='w-full pb-10 mx-2 bg-white rounded-md sm:max-w-sm md:max-w-xl'>
 				<h1 className='my-2 text-2xl font-semibold text-center font-Montserrat'>
 					form builder
 				</h1>
