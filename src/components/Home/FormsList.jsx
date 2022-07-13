@@ -11,7 +11,7 @@ export default function FormsList() {
 		<div className='mt-4'>
 			{forms.length != 0 ? (
 				<ul
-					className='flex flex-col gap-y-2 
+					className='flex flex-col gap-y-1 
 				sdivide-y-[1px] sdivide-pink-700
 				'
 				>
