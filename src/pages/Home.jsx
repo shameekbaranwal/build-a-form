@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-import FormsList from '../components/FormsList.jsx';
+import CreateNewFormButton from '../components/Home/CreateNewFormButton.jsx';
+import FormsList from '../components/Home/FormsList.jsx';
 // welcome to form builder
 
 export default function Home() {
 	const forms = JSON.parse(localStorage.getItem('forms'));
 
 	return (
-		<div>
+		<div className='flex flex-col w-full h-full gap-y-8'>
 			<FormsList forms={forms} />
-			<button>
-				<Link to='/create/0'>Create a New Form</Link>
-			</button>
+			<CreateNewFormButton />
 		</div>
 	);
 }

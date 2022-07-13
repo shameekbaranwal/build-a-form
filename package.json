@@ -8,10 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.6",
-    "@heroicons/react": "^1.0.6",
     "react": "^18.0.0",
-    "react-animate-height": "^3.0.4",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0"
   },

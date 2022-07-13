@@ -9,24 +9,24 @@ function App() {
 		'forms',
 		JSON.stringify([
 			{
-				title: 'Accessibility Survey',
+				title: 'accessibility survey',
 				questions: [],
 			},
 			{
-				title: 'Attendance Form',
+				title: 'attendance form',
 				questions: [],
 			},
 			{
-				title: 'Event Registration',
+				title: 'event registration',
 				questions: [],
 			},
 		]),
 	);
 
 	return (
-		<div className='bg-blue-200 w-full h-full min-h-screen flex justify-center items-center'>
-			<div className='bg-white w-full mx-2 rounded-md sm:max-w-sm md:max-w-xl'>
-				<h1 className='text-center text-2xl font-semibold my-2 font-Montserrat'>
+		<div className='flex items-center justify-center w-full h-full min-h-screen bg-blue-200'>
+			<div className='w-full mx-2 bg-white rounded-md sm:max-w-sm md:max-w-xl'>
+				<h1 className='my-2 text-2xl font-semibold text-center font-Montserrat'>
 					form builder
 				</h1>
 				<Routes>
