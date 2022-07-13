@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import QuestionEditable from '../components/CreateForm/QuestionEditable.jsx';
@@ -6,13 +6,14 @@ import InputField from '../components/CreateForm/InputField.jsx';
 import useQuestions from '../hooks/useQuestions.jsx';
 import AddQuestionButton from '../components/CreateForm/AddQuestionButton.jsx';
 import SaveFormButton from '../components/CreateForm/SaveFormButton.jsx';
+import { FormsContext } from '../contexts/FormsContext.jsx';
 
 export default function CreateForm() {
 	// decrement because the user will see 1-indexed forms but it is stored as 0-indexed
 	let { id } = useParams();
 	id--;
 
-	const forms = JSON.parse(localStorage.getItem('forms'));
+	const { forms } = useContext(FormsContext);
 
 	if (!forms[id])
 		return (
@@ -30,7 +31,7 @@ export default function CreateForm() {
 	return (
 		<div className='flex flex-col '>
 			<h2 className='w-full py-2 my-4 font-mono text-lg text-center bg-green-400/80'>
-				create a new form
+				edit form #{id + 1}
 			</h2>
 			<InputField
 				className='my-4 font-mono font-bold'

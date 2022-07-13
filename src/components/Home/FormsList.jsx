@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { FormsContext } from '../../contexts/FormsContext.jsx';
 import FormListItem from './FormListItem.jsx';
 import NoForms from './NoForms';
 
-export default function FormsList({ forms }) {
+export default function FormsList() {
+	const { forms } = useContext(FormsContext);
+
 	return (
 		<div className='mt-4'>
 			{forms.length != 0 ? (
