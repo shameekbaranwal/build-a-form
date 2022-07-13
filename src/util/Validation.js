@@ -68,8 +68,7 @@ const validateAnswers = (questions, answers) => {
 	};
 
 	const validateCheckboxAnswer = (question, answer, index) => {
-		const valid = Object.values(answer).includes(true);
-		if (question.mandatory && (!valid || answer.length === 0)) {
+		if (question.mandatory && answer.length === 0) {
 			message += `question ${
 				index + 1
 			} cannot be left unanswered. it's a mandatory question.\n`;

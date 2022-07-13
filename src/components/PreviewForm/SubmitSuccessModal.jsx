@@ -24,7 +24,7 @@ export default function SubmitSuccessModal({
 							<p className=''>{`A) ${
 								q.answer.length === 0
 									? 'not answered'
-									: q.answer
+									: q.answer.join(', ')
 							}`}</p>
 						</li>
 					))}
