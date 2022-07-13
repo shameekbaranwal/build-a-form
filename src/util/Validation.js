@@ -54,4 +54,38 @@ const validateFormData = formData => {
 	return { message, isValid };
 };
 
-export { validateFormData };
+const validateAnswers = (questions, answers) => {
+	let message = '';
+	let isValid = true;
+
+	const validateDropdownAnswer = (question, answer, index) => {
+		if (answer.length === 0 && question.mandatory) {
+			message += `question ${
+				index + 1
+			} cannot be left unanswered. it's a mandatory question.\n`;
+			isValid = false;
+		}
+	};
+
+	const validateCheckboxAnswer = (question, answer, index) => {
+		const valid = Object.values(answer).includes(true);
+		if (question.mandatory && (!valid || answer.length === 0)) {
+			message += `question ${
+				index + 1
+			} cannot be left unanswered. it's a mandatory question.\n`;
+			isValid = false;
+		}
+	};
+
+	const validateAnswer = (answer, index) => {
+		if (questions[index].type === 'dropdown')
+			validateDropdownAnswer(questions[index], answer, index);
+		if (questions[index].type === 'checkbox')
+			validateCheckboxAnswer(questions[index], answer, index);
+	};
+
+	answers.forEach(validateAnswer);
+	return { message, isValid };
+};
+
+export { validateFormData, validateAnswers };

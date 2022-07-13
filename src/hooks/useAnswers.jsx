@@ -25,8 +25,11 @@ export default function useAnswers(questions) {
 	const getFinalAnswers = () => {
 		const finalAnswers = [];
 		questions.forEach((q, index) => {
-			if (q.type === 'checkbox')
-				finalAnswers.push(answers[index].join(','));
+			if (q.type === 'checkbox') {
+				const keys = Object.keys(answers[index]);
+				const val = keys.filter(k => answers[index][k]);
+				finalAnswers.push(val);
+			}
 			if (q.type === 'dropdown') finalAnswers.push(answers[index]);
 		});
 		return finalAnswers;

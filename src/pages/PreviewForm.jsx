@@ -42,7 +42,7 @@ export default function PreviewForm() {
 				})}
 			</div>
 
-			<SubmitButton answers={getFinalAnswers} />
+			<SubmitButton getAnswers={getFinalAnswers} questions={questions} />
 		</div>
 	);
 }
