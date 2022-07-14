@@ -22,7 +22,7 @@ export default function PreviewForm() {
 	const { answers, updateAnswer, getFinalAnswers } = useAnswers(questions);
 
 	return (
-		<div className='flex flex-col '>
+		<form className='flex flex-col '>
 			<div className='w-full py-2 my-4 font-mono text-lg text-center bg-green-400/80'>
 				<h2>{title}</h2>
 				<p className='text-sm'>(preview)</p>
@@ -43,6 +43,6 @@ export default function PreviewForm() {
 			</div>
 
 			<SubmitButton getAnswers={getFinalAnswers} questions={questions} />
-		</div>
+		</form>
 	);
 }

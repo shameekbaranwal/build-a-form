@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrashIcon } from '@heroicons/react/outline';
+import { XIcon } from '@heroicons/react/outline';
 
 import InputField from './InputField.jsx';
 
@@ -21,8 +21,14 @@ export default function OptionEditable({
 				setValue={updateOption}
 				className='flex-1'
 			/>
-			<button onClick={removeOption}>
-				<TrashIcon width={15} className='text-red-700' />
+			<button
+				onClick={removeOption}
+				className=' focus:outline-none group'
+			>
+				<XIcon
+					width={15}
+					className='text-red-700 transition-all duration-200 hover:scale-125 group-focus:scale-125'
+				/>
 			</button>
 		</div>
 	);

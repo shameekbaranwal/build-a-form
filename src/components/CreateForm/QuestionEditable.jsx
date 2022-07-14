@@ -39,8 +39,14 @@ export default function QuestionEditable({
 						}}
 					/>
 				</div>
-				<button className='pr-2' onClick={removeQuestion}>
-					<TrashIcon className='text-red-700' width={24} />
+				<button
+					className='pr-2 focus:outline-none group'
+					onClick={removeQuestion}
+				>
+					<TrashIcon
+						className='text-red-700 transition-all duration-200 hover:scale-125 group-focus:scale-125'
+						width={24}
+					/>
 				</button>
 			</div>
 			<div className='flex items-center w-full px-2 my-4 gap-x-4'>
