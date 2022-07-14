@@ -7,11 +7,10 @@ https://user-images.githubusercontent.com/39854726/178959619-cfcd3452-d8f8-491d-
 
 -   React
 -   React Router
--   Tailwind
+-   TailwindCSS
 -   Vite
--   HeadlessUI (by Tailwind)
 
-Deployed on [netlify]('https://build-a-form.netlify.app').
+Deployed on [netlify](https://build-a-form.netlify.app).
 
 ## Requirements
 
@@ -31,9 +30,8 @@ Field Two: A checkbox
 Hint: For UX, you can refer to Google Forms.
 
 ## To-Do
-
-[] Add more input fields - text, date, image.  
-[] Replace localStorage with an actual server.  
-[] Add OAuth to access and fill forms.  
-[] Improve colours in UI.
-[] Make validation more customizable than just a _mandatory_ tag. Allow for regex validation as well.
+- [ ] Add more input fields - text, date, image.  
+- [ ] Replace localStorage with an actual server.  
+- [ ] Add OAuth to access and fill forms.  
+- [ ] Improve colours in UI.
+- [ ] Make validation more customizable than just a _mandatory_ tag. Allow for regex validation as well.
