@@ -1,5 +1,18 @@
 # Form Builder
 
+## Demonstration Video
+https://user-images.githubusercontent.com/39854726/178959619-cfcd3452-d8f8-491d-ba6b-c4170a21707d.mp4
+
+## Built With:
+
+-   React
+-   React Router
+-   Tailwind
+-   Vite
+-   HeadlessUI (by Tailwind)
+
+Deployed on [netlify]('https://build-a-form.netlify.app').
+
 ## Requirements
 
 Develop an app where you'll have to build a custom form builder with the following details.
@@ -17,23 +30,10 @@ Field Two: A checkbox
 
 Hint: For UX, you can refer to Google Forms.
 
-## Structure
+## To-Do
 
-On opening the app, the user will be greeted with a welcome page, where they can view all the forms they have already created and saved.  
-This will be the top level route.  
-In the beginning, it would show _No Forms Created_.  
-Upon creating a new form, they will be taken to the `/create` route.  
-Here, they will have a single question with a single option.  
-For every question:  
- -There will be a top-level label.  
- -Followed by a toggle to set the question as compulsory or not.  
- -Followed by a dropdown to select between a Dropdown and a Checkbox.  
- -Followed by a single editable input field, which would be an option.  
- -Followed by a `+` symbol, which can be used to add new options.  
- -Options will have a delete button at the far right.  
- -The questions' UI will stay the same regardless of whether it's a checkbox or dropdown.  
-At the end of the latest question, there will be a ` + New Question` button.  
-Upon saving the form, it will take the user to the `/preview` route where they can make a dummy response, the output of which will be logged in the console.
-The created form will be stored in localStorage, and will be available for preview the next time they open the top-level route.
-
-There should ideally also be an `/edit/$formID` route which would have the same UI as the `/create` route, but it starts off with a form from localStorage.
+[] Add more input fields - text, date, image.  
+[] Replace localStorage with an actual server.  
+[] Add OAuth to access and fill forms.  
+[] Improve colours in UI.
+[] Make validation more customizable than just a _mandatory_ tag. Allow for regex validation as well.
