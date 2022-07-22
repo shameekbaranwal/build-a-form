@@ -25,19 +25,19 @@ export default function FormListItem({ index, form }) {
 			<div className='flex gap-x-5'>
 				<Link to={`/edit/${index + 1}`}>
 					<PencilIcon
-						className='transition duration-200 text-cyan-600 hover:text-cyan-900 hover:animate-bounce'
+						className='transition duration-200 text-cyan-600 hover:text-cyan-900 hover:animate-spin'
 						width={20}
 					/>
 				</Link>
 				<Link to={`/preview/${index + 1}`}>
 					<EyeIcon
-						className='text-green-700 transition duration-200 hover:text-green-900 hover:animate-bounce'
+						className='text-green-700 transition duration-200 hover:text-green-900 hover:animate-spin'
 						width={20}
 					/>
 				</Link>
 				<button className='' onClick={() => deleteForm(index)}>
 					<TrashIcon
-						className='text-red-500 transition duration-200 hover:text-red-900 hover:animate-bounce'
+						className='text-red-500 transition duration-200 hover:text-red-900 hover:animate-spin'
 						width={20}
 					/>
 				</button>

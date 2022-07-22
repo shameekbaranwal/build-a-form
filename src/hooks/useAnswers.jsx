@@ -5,17 +5,6 @@ export default function useAnswers(questions) {
 
 	const [answers, setAnswers] = useState(defaultAns);
 
-	// useEffect(() => {
-	// 	questions.forEach(q => {
-	// 		if (q.type === 'checkbox') {
-	// 			answers.push([]);
-	// 		}
-	// 		if (q.type === 'dropdown') answers.push('');
-	// 	});
-
-	// 	setAnswers(answers);
-	// }, []);
-
 	const updateAnswer = (index, value) => {
 		const newAnswers = [...answers];
 		newAnswers[index] = value;

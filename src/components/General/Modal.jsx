@@ -43,11 +43,11 @@ export default function Modal({ open, setOpen, children }) {
 								<div className='px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse'>
 									<button
 										type='button'
-										className='inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-500/70 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
+										className='inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 transition duration-100 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500/70 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm hover:bg-red-500/90 hover:text-white'
 										onClick={() => setOpen(false)}
 										ref={cancelButtonRef}
 									>
-										Cancel
+										Close
 									</button>
 								</div>
 							</Dialog.Panel>
